@@ -5,12 +5,12 @@ namespace AdventOfCode2021
 {
     class Program
     {
-        const bool debugMode = true;
+        const bool debugMode = false;
         static void Main(string[] args)
         {
             if(debugMode)
             {
-                ISolution currentDay = new Day11.Solution();
+                ISolution currentDay = new Day12.Solution();
                 currentDay.Calculate();
             }
             else
@@ -38,16 +38,17 @@ namespace AdventOfCode2021
 
         private static void StartText()
         {
-            Console.WriteLine("Welcome to Advent of Code 2021" +
-                "\n=====================\n" +
-                "Select which day to run (1-25) and press enter: ");
+            Console.WriteLine("====================================");
+            Console.WriteLine("== Welcome to Advent of Code 2021 ==");
+            Console.WriteLine("====================================\n\n");
+            Console.Write("Select day to run (1-25):");
         }
 
         private static void AocMenu()
         {
             StartText();
             string userInput = Console.ReadLine();
-            Console.WriteLine("=====================");
+            Console.WriteLine("====================================");
             switch (int.Parse(userInput))
             {
                 case 1:
@@ -82,6 +83,9 @@ namespace AdventOfCode2021
                     break;
                 case 11:
                     ComputeTime(new Day11.Solution());
+                    break;
+                case 12:
+                    ComputeTime(new Day12.Solution());
                     break;
                 default:
                     Console.WriteLine("Selected day not found.");
