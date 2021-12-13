@@ -10,7 +10,7 @@ namespace AdventOfCode2021
         {
             if(debugMode)
             {
-                ISolution currentDay = new Day12.Solution();
+                ISolution currentDay = new Day13.Solution();
                 currentDay.Calculate();
             }
             else
@@ -86,6 +86,9 @@ namespace AdventOfCode2021
                     break;
                 case 12:
                     ComputeTime(new Day12.Solution());
+                    break;
+                case 13:
+                    ComputeTime(new Day13.Solution());
                     break;
                 default:
                     Console.WriteLine("Selected day not found.");
